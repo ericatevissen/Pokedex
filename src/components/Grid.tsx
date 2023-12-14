@@ -1,4 +1,13 @@
 import { GridProps } from "../App";
+import Pokemon from "./Pokemon";
+
+export interface PokemonProps {
+    pokemonType1: string;
+    pokemonType2: string | null;
+    pokemonName: string;
+    pokemonId: number;
+    pokemonSprite: string;
+}
 
 function Grid({ pokemonList, search, type }: GridProps) {
     return (
@@ -13,37 +22,23 @@ function Grid({ pokemonList, search, type }: GridProps) {
                     show = true;
                 }
 
-                if (show === true && pokemon.types[1]) {
+                if (show && pokemon.types[1]) {
                     return (
-                        <div className="pokemon" key={pokemon.id}>
-                            <div className="top-info">
-                                <h2>{pokemon.name}</h2>
-                                <p>#{pokemon.id}</p>
-                            </div>
-                            <div className="bottom-info">
-                                <div>
-                                    <p>{pokemon.types[0].type.name}</p>
-                                    <p>{pokemon.types[1].type.name}</p>
-                                </div>
-                                <img src={pokemon.sprites.other["official-artwork"].front_default}></img>
-                            </div>
-                        </div>
+                        <Pokemon key={pokemon.id} pokemonType1={pokemon.types[0].type.name}
+                        pokemonType2={pokemon.types[1].type.name} 
+                        pokemonName={pokemon.name}
+                        pokemonId={pokemon.id}
+                        pokemonSprite={pokemon.sprites.other["official-artwork"].front_default}/>
                     )
                 }
-                if (show === true) {
+                
+                if (show) {
                     return (
-                        <div className="pokemon" key={pokemon.id}>
-                            <div className="top-info">
-                                <h2>{pokemon.name}</h2>
-                                <p>#{pokemon.id}</p>
-                            </div>
-                            <div className="bottom-info">
-                                <div>
-                                    <p>{pokemon.types[0].type.name}</p>
-                                </div>
-                                <img src={pokemon.sprites.other["official-artwork"].front_default}></img>
-                            </div>
-                        </div>
+                        <Pokemon key={pokemon.id} pokemonType1={pokemon.types[0].type.name} 
+                        pokemonType2={null} 
+                        pokemonName={pokemon.name}
+                        pokemonId={pokemon.id}
+                        pokemonSprite={pokemon.sprites.other["official-artwork"].front_default}/>
                     )
                 }
             })}

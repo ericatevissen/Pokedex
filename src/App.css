@@ -44,7 +44,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20vw;
+    width: 23vw;
     background-color: white;
     padding: 1vmax;
     border-radius: 5%;
@@ -99,6 +99,59 @@ h2 {
     height: 2.75vw;
     width: 20vw;
     font-size: 1.75vw;
+}
+
+.info {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    width: 70vw;
+    background-color: white;
+    padding: 1vmax;
+    border-radius: 5%;
+}
+
+.info-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35vw;
+    border-right: solid black 2px;
+}
+
+.info-left-top {
+    display: flex;
+    gap: 60%;
+    width: 100%;
+}
+
+.info-left-bottom {
+    display: flex;
+}
+
+.info-left-bottom div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vmax;
+}
+
+.info-left-bottom p {
+    display: flex;
+    font-size: max(14px, 1.5vw);
+    align-items: center;
+    justify-content: center;
+    width: 8vmax;
+    height: 3vmax;
+    border: solid black 0.1vmax;
+    border-radius: 2vmax;
+}
+
+.info-left-bottom img {
+    width: 80%;
 }
 
 @media screen and (max-width: 480px){

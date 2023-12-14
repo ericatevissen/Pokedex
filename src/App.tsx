@@ -3,13 +3,16 @@ import './App.css';
 import Grid from './components/Grid';
 import SearchBar from './components/SearchBar';
 import TypeSelect from './components/TypeSelect';
+import Info from './components/Info';
 
-interface Pokemon {
+export interface Pokemon {
   name: string;
   id: number;
   url: string;
   sprites: Sprites;
-  types: Types
+  types: Types;
+  height: number;
+  weight: number;
 }
 
 interface Types {
@@ -45,12 +48,32 @@ export interface GridProps {
   pokemonList: Pokemon[];
   search: string;
   type: string;
+  setInfo: React.Dispatch<React.SetStateAction<Pokemon | null>>
+  setShowInfo: React.Dispatch<React.SetStateAction<boolean>>
+  handleInfo(id: number): void
+}
+
+export interface InfoProps {
+  info: Pokemon | null;
+  showInfo: boolean;
 }
 
 function App() {
   const [pokemonList, setPokemonList] = useState<Array<Pokemon>>([]);
   const [search, setSearch] = useState("");
   const [type, setType] = useState("all");
+  const [showInfo, setShowInfo] = useState(false)
+  const [info, setInfo] = useState<Pokemon | null>(null);
+
+  function handleInfo(id: number) {
+    setShowInfo(true)
+
+    pokemonList.forEach(pokemon => {
+      if (id === pokemon.id) {
+        setInfo(pokemon)
+      }
+    });
+  }
 
   useEffect(() => {
     async function fetchPokemon() {
@@ -76,7 +99,9 @@ function App() {
         <TypeSelect setType={setType}/>
         <SearchBar setSearch={setSearch}/>
       </div>
-      <Grid pokemonList={pokemonList} search={search} type={type}/>
+      <Grid pokemonList={pokemonList} search={search} type={type} 
+      setShowInfo={setShowInfo} setInfo={setInfo} handleInfo={handleInfo}/>
+      <Info info={info} showInfo={showInfo}/>
     </>
   )
 }

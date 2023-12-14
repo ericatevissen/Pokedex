@@ -1,12 +1,13 @@
 import { PokemonProps } from "./Grid"
 
-function Pokemon({pokemonType1, pokemonType2, pokemonName, pokemonId, pokemonSprite}: PokemonProps) {
+function Pokemon({pokemonType1, pokemonType2, pokemonName, pokemonId, pokemonSprite, handleInfo}: PokemonProps) {
+    
     if (pokemonType2) {
         return (
-            <div className="pokemon">
+            <div className="pokemon" onClick={() => handleInfo(pokemonId)}>
                 <div className="top-info">
                     <h2>{pokemonName}</h2>
-                    <p>{pokemonId}</p>
+                    <p>#{pokemonId}</p>
                 </div>
                 <div className="bottom-info">
                     <div>
@@ -19,10 +20,10 @@ function Pokemon({pokemonType1, pokemonType2, pokemonName, pokemonId, pokemonSpr
         )
     }
     return (
-        <div className="pokemon">
+        <div className="pokemon" onClick={() => handleInfo(pokemonId)}>
                 <div className="top-info">
                     <h2>{pokemonName}</h2>
-                    <p>{pokemonId}</p>
+                    <p>#{pokemonId}</p>
                 </div>
                 <div className="bottom-info">
                     <div>

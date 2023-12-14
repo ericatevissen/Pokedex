@@ -17,26 +17,36 @@
     min-height: 100vh;
 }
 
+p {
+    font-size: max(20px, 1.8vw);
+}
+
 h1 {
-    padding: 2vw;
-    font-size: max(16px, 3.5vw);
+    padding: 2vmax;
+    font-size: max(40px, 3.6vw);
     color: white;
+}
+
+h2 {
+    font-size: max(20px, 1.8vw);
 }
 
 .grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 2vw;
+    gap: 2vmax;
     justify-content: center;
+    margin-top: 2vmax;
+    margin-bottom: 2vmax;
 }
 
 .pokemon {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 15vw;
+    width: 18vw;
     background-color: white;
-    padding: 1vw;
+    padding: 1vmax;
     border-radius: 5%;
 }
 
@@ -44,22 +54,40 @@ h1 {
     width: 90%;
 }
 
-#root div {
+.options {
     display: flex;
-    margin-bottom: 2vw;
     align-items: center;
-    gap: 1vw;
+    gap: 1vmax;
 }
 
 #type {
-    height: 2vw;
-    width: 6vw;
+    height: 2.75vw;
+    width: 10vw;
     text-align: center;
-    font-size: 100%;
+    font-size: 1.75vw;
 }
 
 #search {
-    height: 2vw;
+    height: 2.75vw;
     width: 20vw;
-    font-size: 100%;
+    font-size: 1.75vw;
+}
+
+@media screen and (max-width: 480px){
+    .pokemon {
+        width: 45vw;
+    }
+
+    #type {
+        height: 8vw;
+        width: 25vw;
+        text-align: center;
+        font-size: 4.5vw;
+    }
+
+    #search {
+        height: 8vw;
+        width: 50vw;
+        font-size: 4.5vw;
+    }
 }

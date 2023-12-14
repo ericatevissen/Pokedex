@@ -4,7 +4,7 @@ function Grid({ pokemonList, search, type }: GridProps) {
     return (
         <div className="grid"> 
             {pokemonList.map(pokemon => {
-                if (pokemon.name.includes(search) && 
+                if (pokemon.name.includes(search.toLowerCase()) && 
                 (type === pokemon.types[0].type.name ||  type === "all" ||
                 (pokemon.types[1] && type === pokemon.types[1].type.name))
                 ) {

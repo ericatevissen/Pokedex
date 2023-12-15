@@ -18,7 +18,7 @@
 }
 
 p {
-    font-size: max(17px, 1.8vw);
+    font-size: max(18px, 1.8vw);
 }
 
 h1 {
@@ -70,12 +70,12 @@ main {
 
 .bottom-info p {
     display: flex;
-    font-size: max(16px, 1.5vw);
+    font-size: max(15px, 1.5vw);
     align-items: center;
     justify-content: center;
     width: max(80px, 8vw);
     height: max(30px, 3vw);
-    border: solid black 0.1vmax;
+    border: solid black max(1px, 0.15vw);
     border-radius: max(20px, 2vw);
 }
 
@@ -152,9 +152,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: max(80px, 8vw);
-    height: max(30px, 3vw);
-    border: solid black 0.1vmax;
+    width: max(102px, 10.2vw);
+    height: max(36px, 3.6vw);
+    border: solid black max(1px, 0.15vw);
     border-radius: max(20px, 2vw);
 }
 

@@ -31,7 +31,7 @@ h2 {
     font-size: max(18px, 1.8vw);
 }
 
-.grid {
+main {
     display: flex;
     flex-wrap: wrap;
     gap: 2vmax;
@@ -82,7 +82,7 @@ h2 {
     width: 60%;
 }
 
-.options {
+nav {
     display: flex;
     align-items: center;
     gap: 1vmax;
@@ -109,39 +109,47 @@ h2 {
     display: flex;
     align-items: center;
     width: 70vw;
+    height: 30vw;
     background-color: white;
     padding: 1vmax;
     border-radius: 5%;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
 }
 
-.info-left {
+.info h2 {
+    font-size: max(24px, 2.3vw)
+}
+
+.info-main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 35vw;
+    width: 50%;
+    height: 100%;
     border-right: solid black 2px;
 }
 
-.info-left-top {
+.info-main-top {
     display: flex;
-    gap: 60%;
+    justify-content: space-between;
+    padding-right: 5%;
     width: 100%;
 }
 
-.info-left-bottom {
+.info-main-bottom {
     display: flex;
 }
 
-.info-left-bottom div {
+.info-main-bottom div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1vmax;
 }
 
-.info-left-bottom p {
+.info-main-bottom p {
     display: flex;
-    font-size: max(14px, 1.5vw);
+    font-size: max(14px, 1.7vw);
     align-items: center;
     justify-content: center;
     width: 8vmax;
@@ -150,8 +158,25 @@ h2 {
     border-radius: 2vmax;
 }
 
-.info-left-bottom img {
+.info-main-bottom img {
     width: 80%;
+}
+
+.info-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 50%;
+}
+
+.info-stats p:first-of-type {
+    margin-top: auto;
+}
+
+.info-stats p:last-of-type {
+    margin-bottom: auto;
 }
 
 @media screen and (max-width: 480px){
@@ -170,5 +195,24 @@ h2 {
         height: 8vw;
         width: 50vw;
         font-size: 4.5vw;
+    }
+
+    .info {
+        flex-direction: column;
+        width: 80vw;
+        height: 60vh;
+    }
+
+    .info-main {
+        width: 100%;
+        height: fit-content;
+        padding-bottom: 5%;
+        border-right: none;
+        border-bottom: solid black 2px;
+    }
+
+    .info-stats {
+        padding-top: 5%;
+        width: 100%;
     }
 }

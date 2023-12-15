@@ -12,7 +12,7 @@ export interface PokemonProps {
 
 function Grid({ pokemonList, search, type, handleInfo }: GridProps) {
     return (
-        <div className="grid"> 
+        <main> 
             {pokemonList.map(pokemon => {
                 let show;
 
@@ -47,7 +47,7 @@ function Grid({ pokemonList, search, type, handleInfo }: GridProps) {
                     )
                 }
             })}
-        </div>
+        </main>
     )
 }
 

@@ -13,6 +13,7 @@ export interface Pokemon {
   types: Types;
   height: number;
   weight: number;
+  stats: Stats;
 }
 
 interface Types {
@@ -42,6 +43,14 @@ interface OtherSprites {
 
 interface Sprites {
   other: OtherSprites;
+}
+
+interface Stats {
+  [index: number]: Stat;
+}
+
+interface Stat {
+  base_stat: number
 }
 
 export interface GridProps {
@@ -95,10 +104,10 @@ function App() {
   return (
     <>
       <h1>Pokedex</h1>
-      <div className='options'>
+      <nav>
         <TypeSelect setType={setType}/>
         <SearchBar setSearch={setSearch}/>
-      </div>
+      </nav>
       <Grid pokemonList={pokemonList} search={search} type={type} 
       setShowInfo={setShowInfo} setInfo={setInfo} handleInfo={handleInfo}/>
       <Info info={info} showInfo={showInfo}/>

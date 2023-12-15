@@ -18,36 +18,37 @@
 }
 
 p {
-    font-size: max(20px, 1.8vw);
+    font-size: max(17px, 1.8vw);
 }
 
 h1 {
-    padding: 2vmax;
+    padding: max(20px, 2vw);
     font-size: max(40px, 3.6vw);
     color: white;
 }
 
 h2 {
-    font-size: max(18px, 1.8vw);
+    font-size: max(17px, 1.8vw);
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
-    gap: 2vmax;
+    gap: max(20px, 2vw);
     justify-content: center;
-    margin-top: 2vmax;
-    margin-bottom: 2vmax;
+    margin-top: max(20px, 2vw);
+    margin-bottom: max(20px, 2vw);
 }
 
 .pokemon {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
     width: 23vw;
+    height: 16vw;
     background-color: white;
-    padding: 1vmax;
-    border-radius: 5%;
+    padding: max(10px, 1vw);
+    border-radius: max(10px, 1vw);
 }
 
 .top-info {
@@ -64,18 +65,18 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1vmax;
+    gap: max(10px, 1vw);
 }
 
 .bottom-info p {
     display: flex;
-    font-size: max(14px, 1.5vw);
+    font-size: max(16px, 1.5vw);
     align-items: center;
     justify-content: center;
-    width: 8vmax;
-    height: 3vmax;
+    width: max(80px, 8vw);
+    height: max(30px, 3vw);
     border: solid black 0.1vmax;
-    border-radius: 2vmax;
+    border-radius: max(20px, 2vw);
 }
 
 .pokemon img {
@@ -85,7 +86,7 @@ main {
 nav {
     display: flex;
     align-items: center;
-    gap: 1vmax;
+    gap: 4%;
 }
 
 #type {
@@ -111,8 +112,8 @@ nav {
     width: 70vw;
     height: 30vw;
     background-color: white;
-    padding: 1vmax;
-    border-radius: 5%;
+    padding: max(10px, 1vw);
+    border-radius: max(10px, 1vw);
     box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
 }
 
@@ -144,18 +145,17 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1vmax;
+    gap: max(10px, 1vw);
 }
 
 .info-main-bottom p {
     display: flex;
-    font-size: max(14px, 1.7vw);
     align-items: center;
     justify-content: center;
-    width: 8vmax;
-    height: 3vmax;
+    width: max(80px, 8vw);
+    height: max(30px, 3vw);
     border: solid black 0.1vmax;
-    border-radius: 2vmax;
+    border-radius: max(20px, 2vw);
 }
 
 .info-main-bottom img {
@@ -182,6 +182,7 @@ nav {
 @media screen and (max-width: 480px){
     .pokemon {
         width: 45vw;
+        height: 32vw;
     }
 
     #type {
@@ -200,7 +201,7 @@ nav {
     .info {
         flex-direction: column;
         width: 80vw;
-        height: 60vh;
+        height: 150vw;
     }
 
     .info-main {

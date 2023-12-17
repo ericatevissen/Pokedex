@@ -65,6 +65,7 @@ export interface GridProps {
 export interface InfoProps {
   info: Pokemon | null;
   showInfo: boolean;
+  setShowInfo: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 function App() {
@@ -110,7 +111,7 @@ function App() {
       </nav>
       <Grid pokemonList={pokemonList} search={search} type={type} 
       setShowInfo={setShowInfo} setInfo={setInfo} handleInfo={handleInfo}/>
-      <Info info={info} showInfo={showInfo}/>
+      <Info info={info} showInfo={showInfo} setShowInfo={setShowInfo}/>
     </>
   )
 }

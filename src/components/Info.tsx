@@ -1,6 +1,7 @@
 import { InfoProps } from "../App";
+import closeButton from "../public/close-circle.svg"
 
-function Info ({info, showInfo}: InfoProps){
+function Info ({info, showInfo, setShowInfo}: InfoProps){
     if (!showInfo || !info) {
         return null;
     }
@@ -32,6 +33,7 @@ function Info ({info, showInfo}: InfoProps){
                     <p>Special defense: {info.stats[4].base_stat}</p>
                     <p>Speed: {info.stats[5].base_stat}</p>
                 </div>
+                <button onClick={() => setShowInfo(false)}><img src={closeButton}></img></button>
             </div>
         )
     }
@@ -61,6 +63,7 @@ function Info ({info, showInfo}: InfoProps){
                 <p>Special defense: {info.stats[4].base_stat}</p>
                 <p>Speed: {info.stats[5].base_stat}</p>
             </div>
+            <button onClick={() => setShowInfo(false)}><img src={closeButton}></img></button>
         </div>
     )
 }

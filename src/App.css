@@ -19,6 +19,7 @@
     align-items: center;
     background-color: rgb(76, 129, 243);
     min-height: 100vh;
+    font-family: "Dejavu Serif";
 }
 
 h1 {
@@ -189,6 +190,24 @@ nav {
 
 .info-stats p:last-of-type {
     margin-bottom: auto;
+}
+
+button {
+    position: fixed;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 3.5em;
+    height: 3.5em;
+    border: none;
+    overflow: hidden;
+    top: 0%;
+    right: 0%;
+    margin: 0.5em;
+}
+
+button img {
+    width: 100%;
+    height: 100%;
 }
 
 @media screen and (max-width: 1000px) {

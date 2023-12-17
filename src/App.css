@@ -40,15 +40,15 @@ main {
     flex-wrap: wrap;
     gap: 3rem;
     justify-content: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-block: 3rem;
+    margin-inline: 1rem;
 }
 
 .pokemon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: min(45%, 30rem);
+    width: min(45vw, 30rem);
     font-size: min(1.4vw, 0.8rem);
     background-color: white;
     padding: 1.5em;
@@ -94,6 +94,8 @@ nav {
     gap: 4%;
     width: min(90%, 40rem);
     font-size: min(5vw, 2rem);
+    position: sticky;
+    top: 10px;
 }
 
 #type {
@@ -195,11 +197,11 @@ nav {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
     main {
         gap: 2rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-block: 2rem;
+        margin-inline: 0;
     }
 
     h1 {

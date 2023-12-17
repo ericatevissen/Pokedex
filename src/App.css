@@ -155,7 +155,6 @@ nav {
 .info-main-bottom {
     display: flex;
     margin-top: auto;
-    margin-bottom: auto;
 }
 
 .info-main-bottom div {
@@ -239,7 +238,7 @@ button img {
 
     .info-main {
         width: 100%;
-        height: fit-content;
+        height: 51em;
         padding-bottom: 5%;
         border-right: none;
         border-bottom: solid black 2px;

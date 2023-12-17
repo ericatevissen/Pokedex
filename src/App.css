@@ -57,6 +57,10 @@ main {
     gap: 1em;
 }
 
+.pokemon:hover {
+    cursor: pointer;
+}
+
 .top-info {
     display: flex;
     justify-content: space-between;

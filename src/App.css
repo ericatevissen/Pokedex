@@ -1,3 +1,7 @@
+:root {
+    font-size: 62.5%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,38 +21,39 @@
     min-height: 100vh;
 }
 
-p {
-    font-size: max(18px, 1.8vw);
-}
-
 h1 {
-    padding: max(20px, 2vw);
-    font-size: max(40px, 3.6vw);
+    padding: 3rem;
+    font-size: min(12vw, 5rem);
     color: white;
 }
 
 h2 {
-    font-size: max(17px, 1.8vw);
+    font-size: 2.7em;
+}
+
+p {
+    font-size: 2.7em;
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
-    gap: max(20px, 2vw);
+    gap: 3rem;
     justify-content: center;
-    margin-top: max(20px, 2vw);
-    margin-bottom: max(20px, 2vw);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .pokemon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 23vw;
-    height: 16vw;
+    width: min(45%, 30rem);
+    font-size: min(1.4vw, 0.8rem);
     background-color: white;
-    padding: max(10px, 1vw);
-    border-radius: max(10px, 1vw);
+    padding: 1.5em;
+    border-radius: 7%;
+    gap: 1em;
 }
 
 .top-info {
@@ -65,18 +70,17 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: max(10px, 1vw);
+    gap: 2em;
 }
 
 .bottom-info p {
     display: flex;
-    font-size: max(15px, 1.5vw);
     align-items: center;
     justify-content: center;
-    width: max(80px, 8vw);
-    height: max(30px, 3vw);
-    border: solid black max(1px, 0.15vw);
-    border-radius: max(20px, 2vw);
+    width: 8ch;
+    height: 3ch;
+    border: solid black 0.1em;
+    border-radius: 1em;
 }
 
 .pokemon img {
@@ -86,20 +90,23 @@ main {
 nav {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 4%;
+    width: min(90%, 40rem);
+    font-size: min(5vw, 2rem);
 }
 
 #type {
-    height: 2.75vw;
-    width: 10vw;
+    height: 2em;
+    width: 40%;
     text-align: center;
-    font-size: 1.75vw;
+    font-size: 1em;
 }
 
 #search {
-    height: 2.75vw;
-    width: 20vw;
-    font-size: 1.75vw;
+    height: 2em;
+    width: 60%;
+    font-size: 1em;
 }
 
 .info {
@@ -109,16 +116,16 @@ nav {
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
-    width: 70vw;
-    height: 30vw;
+    width: 120em;
     background-color: white;
-    padding: max(10px, 1vw);
-    border-radius: max(10px, 1vw);
+    padding: 1.5em;
+    border-radius: 2.5em;
     box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+    font-size: min(0.8vw, 0.8rem);
 }
 
 .info h2 {
-    font-size: max(24px, 2.3vw)
+    font-size: 3.8em;
 }
 
 .info-main {
@@ -126,40 +133,43 @@ nav {
     flex-direction: column;
     align-items: center;
     width: 50%;
-    height: 100%;
-    border-right: solid black 2px;
+    border-right: solid black 0.3em;
+    align-self: stretch;
 }
 
 .info-main-top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-right: 5%;
     width: 100%;
 }
 
 .info-main-bottom {
     display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .info-main-bottom div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: max(10px, 1vw);
+    gap: 1.5em;
 }
 
 .info-main-bottom p {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: max(102px, 10.2vw);
-    height: max(36px, 3.6vw);
-    border: solid black max(1px, 0.15vw);
-    border-radius: max(20px, 2vw);
+    width: 8ch;
+    height: 3ch;
+    border: solid black 0.1em;
+    border-radius: 1em;
 }
 
 .info-main-bottom img {
-    width: 80%;
+    width: 40em;
 }
 
 .info-stats {
@@ -167,41 +177,39 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 100%;
     width: 50%;
+    align-self: stretch;
 }
 
 .info-stats p:first-of-type {
     margin-top: auto;
-}
+}   
 
 .info-stats p:last-of-type {
     margin-bottom: auto;
 }
 
-@media screen and (max-width: 480px){
-    .pokemon {
-        width: 45vw;
-        height: 32vw;
+@media screen and (max-width: 1000px) {
+    .info {
+        font-size: 0.8vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        gap: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
-    #type {
-        height: 8vw;
-        width: 25vw;
-        text-align: center;
-        font-size: 4.5vw;
-    }
-
-    #search {
-        height: 8vw;
-        width: 50vw;
-        font-size: 4.5vw;
+    h1 {
+        padding: 2rem;
     }
 
     .info {
         flex-direction: column;
         width: 80vw;
-        height: 130vw;
+        font-size: 1.4vw;
     }
 
     .info-main {
@@ -213,7 +221,12 @@ nav {
     }
 
     .info-stats {
-        padding-top: 5%;
+        padding-block: 5%;
         width: 100%;
+        height: fit-content;
+    }
+
+    .info-stats h2 {
+        padding-bottom: 5%;
     }
 }

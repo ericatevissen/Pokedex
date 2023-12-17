@@ -241,6 +241,10 @@ button img {
         border-bottom: solid black 2px;
     }
 
+    .info-main-top {
+        padding-right: 20%;
+    }
+
     .info-stats {
         padding-block: 5%;
         width: 100%;

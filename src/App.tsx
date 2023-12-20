@@ -73,16 +73,16 @@ function App() {
   const [pokemonList, setPokemonList] = useState<Array<Pokemon>>([]);
   const [search, setSearch] = useState("");
   const [type, setType] = useState("all");
-  const [showInfo, setShowInfo] = useState(false)
+  const [showInfo, setShowInfo] = useState(false);
   const [info, setInfo] = useState<Pokemon | null>(null);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
   function handleInfo(id: number) {
-    setShowInfo(true)
+    setShowInfo(true);
 
     pokemonList.forEach(pokemon => {
       if (id === pokemon.id) {
-        setInfo(pokemon)
+        setInfo(pokemon);
       }
     });
   }
@@ -97,18 +97,28 @@ function App() {
         return data;
       }));
 
-      setPokemonList(pokemonDetails)
+      setPokemonList(pokemonDetails);
     }
+    
+    loading()
 
-    fetchPokemon().catch(error => console.error("Error fetching Pokemon:", error));
-    fetchPokemon().finally(() => setLoading(false))
+    async function loading() {
+      try {
+        await fetchPokemon();
+    
+        setLoading(false);
+    
+      } catch (error) {
+        console.error("Error fetching pokemon", error);
+      }
+    }
   }, [])
 
   if (loading) {
     return (
       <h1 className="loading">Loading...</h1>
-    )
-  }
+      )
+    }
 
   return (
     <>

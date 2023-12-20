@@ -4,6 +4,7 @@ import Grid from './components/Grid';
 import SearchBar from './components/SearchBar';
 import TypeSelect from './components/TypeSelect';
 import Info from './components/Info';
+import Pokemon from './components/Pokemon';
 
 export interface Pokemon {
   name: string;
@@ -87,16 +88,15 @@ function App() {
 
   useEffect(() => {
     async function fetchPokemon() {
-      const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
+      const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1017");
       const data = await response.json();
-  
       const pokemonDetails = await Promise.all(data.results.map(async (pokemon: Pokemon) => {
         const response = await fetch(pokemon.url);
         const data = await response.json();
         return data;
       }));
 
-      setPokemonList(pokemonDetails);
+      setPokemonList(pokemonDetails)
     }
 
     fetchPokemon().catch(error => console.error("Error fetching Pokemon:", error));

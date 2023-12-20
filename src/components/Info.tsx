@@ -26,7 +26,7 @@ function Info ({info, showInfo, setShowInfo}: InfoProps) {
                     )
                     }
                     <img src={info.id === 1013 ? "https://www.serebii.net/pokemon/art/1013.png" 
-                    : info.sprites.other["official-artwork"].front_default}></img>
+                    : info.sprites.other["official-artwork"].front_default}/>
                 </div>
             </div>
             <div className="info-stats">
@@ -40,7 +40,7 @@ function Info ({info, showInfo, setShowInfo}: InfoProps) {
                 <p>Special defense: {info.stats[4].base_stat}</p>
                 <p>Speed: {info.stats[5].base_stat}</p>
             </div>
-            <button onClick={() => setShowInfo(false)}><img src={closeButton}></img></button>
+            <button onClick={() => setShowInfo(false)}><img src={closeButton}/></button>
         </div>
     )
 }

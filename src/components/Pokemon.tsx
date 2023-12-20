@@ -19,8 +19,8 @@ function Pokemon({pokemonType1, pokemonType2, pokemonName, pokemonId, pokemonSpr
                     </div>
                 )
                 }
-                <img src={pokemonId === 1013 ? "https://www.serebii.net/pokemon/art/1013.png" 
-                : pokemonSprite} loading="lazy"></img>
+                <img loading="lazy" src={pokemonId === 1013 ? "https://www.serebii.net/pokemon/art/1013.png" 
+                : pokemonSprite}/>
             </div>
         </div>
     )

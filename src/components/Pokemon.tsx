@@ -8,17 +8,17 @@ function Pokemon({pokemonType1, pokemonType2, pokemonName, pokemonId, pokemonSpr
                 <p>#{pokemonId}</p>
             </div>
             <div className="bottom-info">
-            {pokemonType2 ? (
-                <div>
-                    <p>{pokemonType1}</p>
-                    <p>{pokemonType2}</p>
-                </div>
-            ) : (
-                <div>
-                    <p>{pokemonType1}</p>
-                </div>
-            )
-            }
+                {pokemonType2 ? (
+                    <div>
+                        <p>{pokemonType1}</p>
+                        <p>{pokemonType2}</p>
+                    </div>
+                ) : (
+                    <div>
+                        <p>{pokemonType1}</p>
+                    </div>
+                )
+                }
                 <img src={pokemonId === 1013 ? "https://www.serebii.net/pokemon/art/1013.png" 
                 : pokemonSprite} loading="lazy"></img>
             </div>

@@ -75,6 +75,7 @@ function App() {
   const [type, setType] = useState("all");
   const [showInfo, setShowInfo] = useState(false)
   const [info, setInfo] = useState<Pokemon | null>(null);
+  const [loading, setLoading] = useState(true)
 
   function handleInfo(id: number) {
     setShowInfo(true)
@@ -100,7 +101,14 @@ function App() {
     }
 
     fetchPokemon().catch(error => console.error("Error fetching Pokemon:", error));
+    fetchPokemon().finally(() => setLoading(false))
   }, [])
+
+  if (loading) {
+    return (
+      <h1 className="loading">Loading...</h1>
+    )
+  }
 
   return (
     <>

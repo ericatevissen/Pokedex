@@ -213,6 +213,10 @@ button img {
     height: 100%;
 }
 
+.loading {
+    margin-block: auto;
+}
+
 @media screen and (max-width: 1000px) {
     .info {
         font-size: 0.8vw;

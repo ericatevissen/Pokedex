@@ -8,6 +8,7 @@ function Info ({ info, handleInfo }: InfoProps) {
 
     if (name) {
         handleInfo(name);
+        document.title = `Pokedex/${name}`;
     }
 
     if (!info) {

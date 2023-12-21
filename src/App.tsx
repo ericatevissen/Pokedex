@@ -127,8 +127,8 @@ function App() {
             </nav>
             <Grid pokemonList={pokemonList} search={search} type={type}/>
             <Routes>
-                <Route path="Pokedex"/>
-                <Route path="/Pokedex/:name" element={<Info info={info} handleInfo={handleInfo}/>}/>
+                <Route path="/"/>
+                <Route path="/:name" element={<Info info={info} handleInfo={handleInfo}/>}/>
             </Routes>
         </>
     );

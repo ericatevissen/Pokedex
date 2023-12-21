@@ -1,11 +1,19 @@
+import { useNavigate, useParams } from "react-router-dom";
 import { InfoProps } from "../App";
-import closeButton from "../public/close-circle.svg"
+import closeButton from "../public/close-circle.svg";
 
-function Info ({info, showInfo, setShowInfo}: InfoProps) {
-    if (!showInfo || !info) {
+function Info ({ info, handleInfo }: InfoProps) {
+    const navigate = useNavigate();
+    const { name } = useParams();
+
+    if (name) {
+        handleInfo(name);
+    }
+
+    if (!info) {
         return null;
     }
-    
+
     return (
         <div className="info">
             <div className="info-main">
@@ -40,9 +48,9 @@ function Info ({info, showInfo, setShowInfo}: InfoProps) {
                 <p>Special defense: {info.stats[4].base_stat}</p>
                 <p>Speed: {info.stats[5].base_stat}</p>
             </div>
-            <button onClick={() => setShowInfo(false)}><img src={closeButton}/></button>
+            <button><img src={closeButton} onClick={() => navigate("/Pokedex/")}/></button>
         </div>
-    )
+    );
 }
 
-export default Info
+export default Info;

@@ -1,8 +1,11 @@
-import { PokemonProps } from "./Grid"
+import { PokemonProps } from "./Grid";
+import { useNavigate } from "react-router-dom";
 
-function Pokemon({pokemonType1, pokemonType2, pokemonName, pokemonId, pokemonSprite, handleInfo}: PokemonProps) {
+function Pokemon({ pokemonType1, pokemonType2, pokemonName, pokemonId, pokemonSprite }: PokemonProps) {
+    const navigate = useNavigate();
+
     return (
-        <div className="pokemon" onClick={() => handleInfo(pokemonId)}>
+        <div className="pokemon" onClick={() => { navigate(`/Pokedex/${pokemonName}`);}}>
             <div className="top-info">
                 <h2>{pokemonName}</h2>
                 <p>#{pokemonId}</p>
@@ -20,10 +23,10 @@ function Pokemon({pokemonType1, pokemonType2, pokemonName, pokemonId, pokemonSpr
                 )
                 }
                 <img loading="lazy" src={pokemonId === 1013 ? "https://www.serebii.net/pokemon/art/1013.png" 
-                : pokemonSprite}/>
+                    :pokemonSprite}/>
             </div>
         </div>
-    )
+    );
 }
 
 export default Pokemon;

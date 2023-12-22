@@ -49,7 +49,7 @@ function Info ({ info, handleInfo }: InfoProps) {
                 <p>Special defense: {info.stats[4].base_stat}</p>
                 <p>Speed: {info.stats[5].base_stat}</p>
             </div>
-            <button><img src={closeButton} onClick={() => navigate("/")}/></button>
+            <button><img src={closeButton} onClick={() => navigate("/Pokedex/")}/></button>
         </div>
     );
 }

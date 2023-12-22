@@ -5,7 +5,7 @@ function Pokemon({ pokemonType1, pokemonType2, pokemonName, pokemonId, pokemonSp
     const navigate = useNavigate();
 
     return (
-        <div className="pokemon" onClick={() => navigate(`/Pokedex/${pokemonName}`)}>
+        <div className="pokemon" onClick={() => navigate(`/${pokemonName}`)}>
             <div className="top-info">
                 <h2>{pokemonName}</h2>
                 <p>#{pokemonId}</p>

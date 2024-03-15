@@ -122,8 +122,8 @@ function App() {
         <>
             <h1>Pokedex</h1>
             <nav>
-            <TypeSelect setType={setType}/>
-            <SearchBar setSearch={setSearch}/>
+                <TypeSelect setType={setType}/>
+                <SearchBar setSearch={setSearch}/>
             </nav>
             <Grid pokemonList={pokemonList} search={search} type={type}/>
             <Routes>
